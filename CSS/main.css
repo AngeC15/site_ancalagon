@@ -1,0 +1,156 @@
+body{
+	margin: 0;
+	padding:0;
+}
+header{
+    position: -webkit-sticky; /* Safari */
+    position: sticky; /* stick the header on top while scrolling */
+    background: rgba(236, 223, 90,1);
+    top: 0; /* Let a little space on the top */
+    display: flex; /* put all on the same line */
+    flex-flow: row nowrap;
+    justify-content: space-around; /* logo on left, text on center and menu on right */
+    align-items: center; /* make the texte go down */
+    z-index: 49;
+}
+section{
+
+    background-color: #4bc032;
+
+
+}
+footer {
+    background-color: green;
+    float: bottom; /* put the content at the bottom */
+    bottom: 0; /* put the content at the bottom with no space */
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 1% 5% 1% 5%;
+}
+.nav-list
+{
+	list-style: none;
+	display: flex;
+}
+.nav-list li:hover
+{
+	text-decoration: underline;
+	cursor: pointer;
+}
+.nav-list li
+{
+	display: inline-block;
+	padding: 10px;
+	margin: 10px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+.content
+{
+	padding: 5% 10% 5% 10%;
+
+
+
+
+}
+.cityLogo{
+    margin-left: 6%;
+    margin-right: 2%;
+}
+.menuDiv{
+    height: 100%;
+}
+.divEmblem{
+    display: inline;
+    position: -webkit-sticky; /* Safari */
+    position: sticky; /* stick the header on top while scrolling */
+    top: 0;
+    z-index: 50;
+
+
+}
+.section-Header{
+    /* for_parralax_style */
+    position: relative;
+    min-height: 400px;
+    background-attachment : fixed;
+    background-image: url(../pictures/team.png); /* url de l'image */
+    background-repeat: no-repeat; /* Ne pas répéter l'image sur X et Y*/
+    background-size:contain;
+    border: 1px solid black;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.cityEmblem{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(100%);
+    height: 100%;
+    width: min-content;
+}
+.announce{
+    color: white;
+}
+
+.item-footer{
+    margin: 0 15%;
+}
+
+.photo-cal{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+
+
+}
+
+.calendar{
+    background-color: red;
+    float: right;
+    position: relative;
+    display: inline-block;
+    min-height: 20em;
+    min-width: 30em;
+}
+
+.trombi{
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+
+}
+.actuality-content{
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.actu {
+    width: 20%;
+    margin: 25px;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+}
+
+.actu .text {
+    padding: 0 20px 20px;
+}
+.actu .text > button {
+    background: gray;
+    border: 0;
+    color: white;
+    padding: 10px;
+    width: 100%;
+}
+.actu:nth-child(1) {
+    width: 40%;
+}
+
+.actu img {
+    max-width: 100%;
+}
