@@ -143,6 +143,33 @@ footer {
 .actu img {
     max-width: 100%;
 }
+.pic {
+    display: flex;
+    flex: 1;
+    padding: 1em;
+    text-align: center;
+    align-items: center;
+
+}
+
+.effect_highlight {
+    text-decoration: none;
+    background-position-y: 0;
+    background-image: -webkit-gradient( linear, left top, left bottom, color-stop(50%, orangered), color-stop(50%, #fc0));
+    background-image: -o-linear-gradient( violet 50%,#fc0 50%);
+    background-image: linear-gradient( red 50%, #fc0 50%); /* background color   */
+    -webkit-transition: background 300ms ease;
+    -o-transition: background 300ms ease;
+    transition: background 300ms ease;
+    padding: 4px 0 0;
+    background-size: auto 175%;
+    color: inherit;
+}
+
+.effect_highlight:hover {
+    background-position-y: 100%;
+}
+
 
 .slider {
     width: 50%;
@@ -193,3 +220,4 @@ footer {
     right: 0;
     color: black;
 }
+
