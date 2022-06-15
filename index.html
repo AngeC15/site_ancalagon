@@ -5,25 +5,100 @@
     <title>Ville de Samère-les-Morts</title>
     <link rel="stylesheet" href="CSS/main.css">
     <script src="scripts/slider.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
 
 </head>
 <body>
+    <!--
 
+                                                                       ,-,
+                                                             _.-=;~ /_
+                                                          _-~   '     ;.
+                                                      _.-~     '   .-~-~`-._
+                                                _.--~~:.             --.____88
+                              ____.........--~~~. .' .  .        _..-------~~
+                     _..--~~~~               .' .'             ,'
+                 _.-~                        .       .     ` ,'
+               .'                                    :.    ./
+             .:     ,/          `                   ::.   ,'
+           .:'     ,(            ;.                ::. ,-'
+          .'     ./'.`.     . . /:::._______.... _/:.o/
+         /     ./'. . .)  . _.,'               `88;?88|
+       ,'  . .,/'._,-~ /_.o8P'                  88P ?8b
+    _,'' . .,/',-~    d888P'                    88'  88|
+ _.'~  . .,:oP'        ?88b                     88.--'8b.
+:     ...' 88o          .88o                    `~~   `~~
+`.;;;:='    ~~            ~~~
+
+
+
+-->
 
     <header>
         <!-- here the logo of the city -->
         <div>
-			<img width="80" height="80" src="pictures/giaLogoPrincipaleRounded.png" class="cityLogo" alt="Logo de Gia" sizes="(max-width: 80px) 100vw, 80px">
+            <a href="index.html">
+			    <img width="80" height="80" src="pictures/giaLogoPrincipaleRounded.png" class="cityLogo" alt="Logo de Gia" sizes="(max-width: 80px) 100vw, 80px">
+            </a>
 		</div>
         <!-- some text about city -->
-        <h1>This is the header</h1>
+        <div>
+            <h1 class="nameCity">Samère les Morts</h1>
+        </div>
         <!-- the menue -->
-            <nav>
+            <nav class="navbar">
 				<ul class="nav-list">
-					<li class="menue"> elm 1</li>
-					<li class="menue"> elm 2</li>
-					<li class="menue"> elm 3</li>
-					<li class="menue"> elm 4</li>
+                    <!-- USING CHECKBOX HACK -->
+                    <input type="checkbox" id="checkbox_toggle" />
+                    <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+                    <!-- NAVIGATION MENUS -->
+                    <div class="menu">
+                        <li class="menue"><a href="/"> Acceuil</a>
+                            <ul class="dropdown">
+                                <li><a href="/">Dropdown 1 </a></li>
+                                <li><a href="/">Dropdown 2</a></li>
+                                <li><a href="/">Dropdown 2</a></li>
+                                <li><a href="/">Dropdown 3</a></li>
+                                <li><a href="/">Dropdown 4</a></li>
+                            </ul>
+                        </li>
+                        <li class="menue"><a href="/"> Tourisme</a>
+                            <ul class="dropdown">
+                                <li><a href="/">Dropdown 1 </a></li>
+                                <li><a href="/">Dropdown 2</a></li>
+                                <li><a href="/">Dropdown 2</a></li>
+                                <li><a href="/">Dropdown 3</a></li>
+                                <li><a href="/">Dropdown 4</a></li>
+                            </ul>
+                        </li>
+                        <li class="menue"><a href="/"> Services</a>
+                            <ul class="dropdown">
+                                <li><a href="/">Dropdown 1 </a></li>
+                                <li><a href="/">Dropdown 2</a></li>
+                                <li><a href="/">Dropdown 2</a></li>
+                                <li><a href="/">Dropdown 3</a></li>
+                                <li><a href="/">Dropdown 4</a></li>
+                            </ul>
+                        </li>
+                        <li class="menue"><a href="/"> Cultures</a>
+                            <ul class="dropdown">
+                                <li><a href="/">Dropdown 1 </a></li>
+                                <li><a href="/">Dropdown 2</a></li>
+                                <li><a href="/">Dropdown 2</a></li>
+                                <li><a href="/">Dropdown 3</a></li>
+                                <li><a href="/">Dropdown 4</a></li>
+                            </ul>
+                        </li>
+                        <li class="menue"><a href="/"> Administratif </a>
+                            <ul class="dropdown">
+                                <li><a href="/">Dropdown 1 </a></li>
+                                <li><a href="/">Dropdown 2</a></li>
+                                <li><a href="/">Dropdown 2</a></li>
+                                <li><a href="/">Dropdown 3</a></li>
+                                <li><a href="/">Dropdown 4</a></li>
+                            </ul>
+                        </li>
+                    </div>
 				</ul>
             </nav>
         <!-- The img/emblem of samere -->
@@ -42,20 +117,17 @@
                         Jetez un coup d'oeil au dernieres actualités:
                     </h1>
                 </div>
-                    <div class="slider slider-1">
-                        <div class="photos">
-                            <img src="./pictures/renard1.jpg" class="shown" alt="">
-                            <img src="./pictures/renard2.png" alt="">
-                            <img src="./pictures/renard3.jpg" alt="">
-                            <img src="./pictures/tigre1.jpg" alt="">
-                            <div class="buttons">
-                                <div class="prev"></div>
-                                <div class="next"></div>
-                            </div>
-                        </div>
+                <div class="slider">
+                    <button class="prev"><</button>
+                    <div class="photos">
+                        <img src="./pictures/renard1.jpg" class="shown" alt="">
+                        <img src="./pictures/renard2.png"   alt="">
+                        <img src="./pictures/renard3.jpg" alt="">
+                        <img src="./pictures/tigre1.jpg" alt="">
                     </div>
+                    <button class="next">></button>
                 </div>
-
+            </div>
 
             <hr \>
 

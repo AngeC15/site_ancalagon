@@ -1,3 +1,10 @@
+/* UTILITIES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body{
     margin: 0;
     padding: 0;
@@ -51,9 +58,6 @@ footer {
 {
 	padding: 5% 10% 5% 10%;
 
-
-
-
 }
 .cityLogo{
     margin-left: 6%;
@@ -78,7 +82,8 @@ footer {
     background-attachment : fixed;
     background-image: url(../pictures/team.png); /* url de l'image */
     background-repeat: no-repeat; /* Ne pas répéter l'image sur X et Y*/
-    background-size:contain;
+    background-size:100% 500px;
+
     border: 1px solid black;
     padding: 0;
     margin: 0;
@@ -117,13 +122,19 @@ footer {
     align-items: flex-start;
     display: flex;
     flex-wrap: wrap;
+    /* added */
+    justify-content: center;
+    width: 80%;
+    max-width: 1300px;
+    margin: 70px auto 0;
+
 }
 
 .actu {
     width: 20%;
     margin: 25px;
     border: 1px solid #ccc;
-    box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+    box-shadow: 2px 2px 6px 0 rgba(0,0,0,0.3);
 }
 
 .actu .text {
@@ -143,14 +154,6 @@ footer {
 .actu img {
     max-width: 100%;
 }
-.pic {
-    display: flex;
-    flex: 1;
-    padding: 1em;
-    text-align: center;
-    align-items: center;
-
-}
 
 .effect_highlight {
     text-decoration: none;
@@ -164,17 +167,31 @@ footer {
     padding: 4px 0 0;
     background-size: auto 175%;
     color: inherit;
+    width: auto;
+    overflow: auto;
+
 }
 
 .effect_highlight:hover {
     background-position-y: 100%;
 }
 
+.nameCity{
+    font-size: 5vw;
+}
 
+
+/**
 .slider {
     width: 50%;
     margin: 0 auto 20px;
     text-align: center;
+}
+
+.slider .photos {
+    border: solid 1px black;
+    display: flex;
+    justify-content: center;
 }
 
 .slider .photos {
@@ -200,6 +217,7 @@ footer {
     opacity: 1;
 }
 
+
 .prev:before,
 .next:before {
     color: #fff;
@@ -221,3 +239,155 @@ footer {
     color: black;
 }
 
+**/
+
+.pic {
+    display: flex;
+    justify-content: space-around;
+    height: auto;
+    min-height: 600px;
+    text-align: center;
+    align-items: center;
+
+}
+
+.slider {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 50%;
+}
+
+.slider button {
+    border: none;
+    background-color: transparent;
+    font-size: 50px;
+}
+
+.slider button:hover {
+    cursor: pointer;
+}
+
+.photos img:not(.shown) {
+    display: none;
+}
+
+.slider img {
+    max-width: 75%;
+    width: auto;
+    max-height: 400px;
+}
+
+/*======================= For responsive nav-bar ================*/
+/* NAVBAR STYLING STARTS */
+
+.nav-list a {
+    color: #fff;
+}
+/* LOGO */
+.logo {
+    font-size: 32px;
+}
+/* NAVBAR MENU */
+.menu {
+    display: flex;
+    gap: 1em;
+    font-size: 18px;
+}
+.menu li:hover {
+    background-color: #4c9e9e;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+.menu li {
+    padding: 5px 14px;
+}
+/* DROPDOWN MENU */
+.menue {
+    position: relative;
+}
+.dropdown {
+    background-color: rgb(1, 139, 139);
+    padding: 1em 0;
+    position: absolute; /*WITH RESPECT TO PARENT*/
+    display: none;
+    border-radius: 8px;
+    top: 35px;
+}
+.dropdown li + li {
+    margin-top: 10px;
+}
+.dropdown li {
+    padding: 0.5em 1em;
+    width: 8em;
+    text-align: center;
+}
+.dropdown li:hover {
+    background-color: #4c9e9e;
+}
+.menue:hover .dropdown {
+    display: block;
+}
+
+/*RESPONSIVE NAVBAR MENU STARTS*/
+/* CHECKBOX HACK */
+input[type=checkbox]{
+    display: none;
+}
+/*HAMBURGER MENU*/
+.hamburger {
+    display: none;
+    font-size: 24px;
+    user-select: none;
+}
+/* APPLYING MEDIA QUERIES */
+@media (max-width: 900px) {
+    .menu {
+        display:none;
+        position: absolute;
+        background-color:teal;
+        right: 0;
+        left: 0;
+        top: 0;
+        text-align: center;
+        padding: 16px 0;
+        z-index: 55;
+    }
+    .menu li:hover {
+        display: inline-block;
+        background-color:#4c9e9e;
+        transition: 0.3s ease;
+    }
+    .menu li + li {
+        margin-top: 0px;
+    }
+    input[type=checkbox]:checked ~ .menu{
+        display: block;
+    }
+    .hamburger {
+        display: block;
+    }
+    .dropdown {
+        left: 50%;
+        top: 30px;
+        transform: translateX(35%);
+    }
+    .dropdown li:hover {
+        background-color: #4c9e9e;
+    }
+
+    .pic {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        min-height: 100px;
+        align-items: center;
+
+    }
+    .section-Header {
+        min-height: 100px;
+        background-size:100% 200px;
+    }
+
+}

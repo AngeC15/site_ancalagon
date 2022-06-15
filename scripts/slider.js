@@ -1,9 +1,9 @@
 window.onload = function() {
 
     var slider1 = new Slider({
-        images: '.slider-1 img',
-        btnPrev: '.slider-1 .buttons .prev',
-        btnNext: '.slider-1 .buttons .next',
+        images: '.slider img',
+        btnPrev: '.slider .prev',
+        btnNext: '.slider .next',
         auto: false
     });
 
