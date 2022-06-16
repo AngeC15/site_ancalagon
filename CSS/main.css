@@ -56,7 +56,10 @@ footer {
 }
 .content
 {
-	padding: 5% 10% 5% 10%;
+	padding: 0% 10% 5% 10%; /*TODO change to not have to much space*/
+    display: flex;
+    flex-direction: column;
+
 
 }
 .cityLogo{
@@ -261,7 +264,7 @@ footer {
 .slider {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     width: 50%;
 }
 
@@ -351,6 +354,70 @@ input[type=checkbox]{
 .navbar a {
     text-decoration: none;
 }
+
+.quickInfo {
+    display: flex;
+    align-self: flex-end;
+    max-height: 200px;
+    max-width: 200px;
+    top: 0;
+    min-height: 10%;
+    min-width: 10%;
+    background-color: dimgrey;
+    border: black 1px solid;
+}
+
+
+.slideshow-container {
+    max-width: 500px;
+    position: relative;
+    margin: auto
+}
+
+.mySlides {
+    display: none;
+    height: 200px;
+    border: solid 1px black;
+
+}
+
+.textTrombi {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #222428
+}
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color .6s ease
+}
+
+.active,
+.dot:hover {
+    background-color: #717171
+}
+
+
 /* APPLYING MEDIA QUERIES */
 @media (max-width: 950px) {
     .menu {
@@ -391,7 +458,7 @@ input[type=checkbox]{
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: space-around;
         min-height: 100px;
         align-items: center;
 
