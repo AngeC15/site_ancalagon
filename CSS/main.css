@@ -328,7 +328,7 @@ footer {
     margin-top: 10px;
 }
 .dropdown li {
-    padding: 0.5em 1em;
+    padding: 0.5em 0em;
     width: 8em;
     text-align: center;
 }
