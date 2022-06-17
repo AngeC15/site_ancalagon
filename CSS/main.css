@@ -122,30 +122,38 @@ footer {
 
 
 .actuality-content{
-    align-items: flex-start;
+    align-items: stretch;
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     /* added */
     justify-content: space-around;
-    width: 80%;
-    max-width: 950px;
     margin: auto auto 0;
+
 
 }
 
 .actu {
-    width: 30%;
+
+
     margin: 25px;
     border: 1px solid #ccc;
     box-shadow: 2px 2px 6px 0 rgba(0,0,0,0.3);
 
-    height: 45%;
+
+    max-height: 20%;
     overflow: hidden;
     flex-shrink: 0;
+
+    min-width:26%;
+    flex-grow:1;
+    border:solid;
 }
 
 .actu .text {
     padding: 0 20px 20px;
+    height: 100%;
+
 }
 .actu .text > button {
     background: gray;
@@ -153,10 +161,12 @@ footer {
     color: white;
     padding: 10px;
     width: 100%;
+    position:relative;
+    bottom:0;
 }
 .actu:nth-child(1) {
-    width: 45%;
-    height: 100%;
+    width: 60%;
+    height: 50%;
 }
 
 .actu img {
@@ -255,7 +265,7 @@ footer {
     display: flex;
     justify-content: space-around;
     height: auto;
-    min-height: 600px;
+    min-height: 500px;
     text-align: center;
     align-items: center;
 
@@ -358,8 +368,10 @@ input[type=checkbox]{
 .quickInfo {
     display: flex;
     align-self: flex-end;
-    max-height: 200px;
-    max-width: 200px;
+    justify-content: flex-end;
+    flex-direction: column;
+    height: 200px;
+    width: 200px;
     top: 0;
     min-height: 10%;
     min-width: 10%;
@@ -369,26 +381,18 @@ input[type=checkbox]{
 
 
 .slideshow-container {
-    max-width: 500px;
     position: relative;
     margin: auto
 }
 
-.mySlides {
-    display: none;
-    height: 200px;
-    border: solid 1px black;
-
-}
-
 .textTrombi {
+    display: none;
     color: #f2f2f2;
-    font-size: 15px;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    position: absolute;
-    bottom: 0;
+    font-size: 20px;
+    position: relative;
+    top: 0;
     width: 100%;
+    height: auto;
     text-align: center;
     background-color: #222428
 }
@@ -398,7 +402,8 @@ input[type=checkbox]{
     font-size: 12px;
     padding: 8px 12px;
     position: absolute;
-    top: 0
+    top: 0px;
+    display: inline-block;
 }
 
 .dot {
