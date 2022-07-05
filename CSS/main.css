@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Calibri;
 }
 
 body{
@@ -56,7 +57,7 @@ footer {
 }
 .content
 {
-	padding: 0% 10% 5% 10%; /*TODO change to not have to much space*/
+	padding: 0% 5% 5% 5%; /*TODO change to not have to much space*/
     display: flex;
     flex-direction: column;
 
@@ -122,7 +123,7 @@ footer {
 
 
 .actuality-content{
-    align-items: stretch;
+    align-items: flex-start;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -135,7 +136,7 @@ footer {
 
 .actu {
 
-
+    max-width: 35%;
     margin: 25px;
     border: 1px solid #ccc;
     box-shadow: 2px 2px 6px 0 rgba(0,0,0,0.3);
@@ -146,7 +147,6 @@ footer {
     flex-shrink: 0;
 
     min-width:26%;
-    flex-grow:1;
     border:solid;
 }
 
@@ -364,6 +364,13 @@ input[type=checkbox]{
 .navbar a {
     text-decoration: none;
 }
+hr {
+    color: black;
+
+}
+button a {
+    text-decoration: none;
+}
 
 .quickInfo {
     display: flex;
@@ -417,9 +424,45 @@ input[type=checkbox]{
     transition: background-color .6s ease
 }
 
+.hide{
+    display: block;
+    visibility: hidden;
+}
+
+.drapeau{
+    background-color: rgba(50,50,50,0.4);
+    border: black solid 1px;
+}
+
+.li_horiz{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    text-align: center;
+}
+
+.coul_highlight{
+    font-weight: bold;
+    text-decoration: underline;
+    cursor: help;
+}
+
 .active,
 .dot:hover {
     background-color: #717171
+}
+
+.citation{
+    background-color: rgba(20, 20, 20, 0.4);
+    color: whitesmoke;
+}
+.citation_bottom{
+    text-decoration: underline overline orange;
+    font-weight: bold;
+}
+
+.explication{
+    margin-top: 10px;
 }
 
 
